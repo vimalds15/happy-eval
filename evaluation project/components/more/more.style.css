@@ -1,0 +1,76 @@
+.more-container {
+    padding-top: 0;
+    margin: 3rem 0;
+  }
+  
+  .more-items-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 5rem;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    padding: 0 14rem;
+  }
+  
+  .more-item-wrapper {
+    width: 33%;
+  }
+  
+  .more-item {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    gap: 1rem;
+    width: 100%;
+    border: 1px solid transparent;
+  }
+  
+  .more-item:hover {
+    border: 1px solid #dadada;
+    border-radius: 16px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.08);
+  }
+  
+  .more-item-cta-container {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+  
+  .pricing-tick {
+    width: 20px;
+    height: 20px;
+    background: url(../images/pricing-tick.svg) no-repeat left top;
+  }
+  
+  @media (max-width: 992px) {
+    .more-items-container {
+      padding: 0 4rem;
+    }
+    .more-item-wrapper {
+      width: 30%;
+    }
+  }
+  @media (max-width: 1200px) {
+    .more-items-container {
+      justify-content: center;
+    }
+    .more-item-wrapper {
+      width: 48%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .more-item-wrapper {
+      width: 80%;
+    }
+  }
+  
+  /* More End */
+  
+
+  

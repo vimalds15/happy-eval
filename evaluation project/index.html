@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="styles/global.css" />
+    <title>HappyFox - Anto Vimalan S</title>
+  </head>
+  <body>
+    <div id="header"></div>
+    <div id="navbar"></div>
+    <div id="plans"></div>
+    <div id="compare"></div>
+    <div id="faq"></div>
+    <div id="more"></div>
+    <div id="footer"></div>
+    <div></div>
+
+    <script>
+      function loadHTML(elementId, url) {
+        fetch(url)
+          .then((response) => response.text())
+          .then((html) => {
+            document.getElementById(elementId).innerHTML = html;
+          })
+          .catch((error) => {
+            console.warn("Error loading HTML...", error);
+          });
+      }
+
+      loadHTML("header", "components/header/header.html");
+      loadHTML("navbar", "components/navbar/navbar.html");
+      loadHTML("plans", "components/plans/plans.html");
+      loadHTML("compare", "components/compare/compare.html");
+      loadHTML("faq", "components/faq/faq.html");
+      loadHTML("more", "components/more/more.html");
+      loadHTML("footer", "components/footer/footer.html");
+    </script>
+  </body>
+</html>

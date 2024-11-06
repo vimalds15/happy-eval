@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10rem;
+  margin-top: 0.6rem;
+}
+
+.header-logo {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+.header-logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.header-products {
+  display: flex;
+  gap: 0.4rem;
+  background-color: #ffecec;
+  padding: 0.8rem 1.8rem;
+  border-radius: 0.7rem 0.7rem 0rem 0rem;
+  border: 1px solid rgb(255 58 58 / 20%);
+  border-bottom: 0;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .header {
+    padding: 0.6rem 6rem;
+  }
+  .header-products {
+    display: none;
+  }
+}

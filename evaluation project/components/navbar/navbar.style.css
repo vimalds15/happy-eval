@@ -1,0 +1,50 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 10rem;
+  background-color: #ffecec;
+  border-top: 1px solid rgb(255 58 58 / 20%);
+}
+
+.navbar-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-options-container {
+  display: flex;
+  gap: 3rem;
+}
+
+.navbar-options-item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: background-color 200ms ease;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.navbar-options-item:hover {
+  background-color: #ffffff;
+}
+
+.navbar-demo-cta {
+  background-color: #ff3a3a;
+  padding: 0.3rem 0.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    padding: 0.6rem 6rem;
+  }
+  .navbar-options-container {
+    display: none;
+  }
+}
