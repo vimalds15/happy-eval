@@ -40,6 +40,9 @@
   text-align: start;
   border-bottom: 1px solid #ddd;
   padding: 1rem;
+  position: sticky;
+  top: 6.7%;
+  z-index: 1;
 }
 
 .plans-grid-row {
@@ -50,6 +53,8 @@
   padding: 1rem;
   text-align: start;
   background-color: #fff;
+  color: #797979;
+  font-weight: 300;
 }
 
 .plans-grid-row:nth-child(even) .plans-grid-item {
@@ -72,12 +77,68 @@
   font-weight: 500;
 }
 
+.pricing-no-tick,
+.pricing-tick {
+  width: 20px;
+  height: 20px;
+  background: url(https://assets.www.happyfox.com/v2/images/pricing-tick.svg)
+    no-repeat left top;
+}
+
+.pricing-no-tick {
+  background: url(https://assets.www.happyfox.com/v2/images/pricing-no-tick.svg)
+    no-repeat left top;
+}
+
+.row-header {
+  width: 22rem;
+}
+
 .row-header:hover p {
   color: #f16631;
   border-bottom: 0.5px dotted #f16631;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  .plans-grid {
+    display: block;
+    padding: 0;
+  }
+
+  .plans-grid-header {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0;
+    position: sticky;
+    top: 6.7%;
+  }
+
+  .plans-grid-header-item {
+    border: none;
+    position: none;
+  }
+
+  .plans-grid-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .row-header {
+    font-weight: bold;
+    grid-column: span 4;
+    text-align: left;
+    padding-left: 10px;
+    width: 100%;
+  }
+
+  .plans-grid-item {
+    padding: 1rem;
+    font-size: 14px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 576px) {
   .plans-grid {
     display: block;
     padding: 0;
@@ -87,11 +148,15 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 0;
+    position: sticky;
+    top: 6.7%;
   }
 
   .plans-grid-header-item {
     border: none;
+    position: none;
   }
+
   .plans-grid-row {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -102,6 +167,7 @@
     grid-column: span 2;
     text-align: left;
     padding-left: 10px;
+    width: 100%;
   }
 
   .plans-grid-item {

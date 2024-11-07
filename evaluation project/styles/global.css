@@ -48,6 +48,11 @@ p {
   color: #9b9b9b;
   font-weight: 300;
 }
+
+.text-xsm {
+  font-size: 12px;
+}
+
 .text-sm {
   font-size: 14px;
 }
@@ -99,3 +104,18 @@ p {
 .chevron-right:hover {
   fill: white;
 }
+
+.modal-overlay {
+  position: fixed;
+  top: 7.6%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  pointer-events: none;
+}
+
+

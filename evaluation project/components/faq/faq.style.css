@@ -36,7 +36,23 @@
 }
 
 .faq-answer-container {
-  display: none;
+  max-height: 0;
+  transition: all 500ms ease;
+  overflow: hidden;
+}
+
+.faq-answer-container.active {
+  max-height: 250px;
+}
+
+.faq-answer-container p {
+  margin-top: 1rem;
+  color: #6d717e;
+}
+
+.arrow-down.active {
+  transform: rotate(180deg);
+  transition: transform 800ms ease;
 }
 
 @media (max-width: 768px) {
