@@ -52,7 +52,6 @@ function initializeCompare() {
 
             let featureValue =
               feature[plan === "Enterprise PRO" ? "epro" : plan.toLowerCase()];
-            console.log(feature);
 
             if (typeof featureValue === "boolean") {
               const tick = document.createElement("div");

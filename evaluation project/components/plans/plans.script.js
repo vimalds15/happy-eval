@@ -39,7 +39,6 @@ function initializePlans() {
           "text-xlg",
           "text-bold"
         );
-        console.log(plan.type);
         planType.textContent = plan.type;
         planElement.appendChild(planType);
 
