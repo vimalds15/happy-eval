@@ -167,6 +167,7 @@
 .plans-pricing-item-amount {
   padding-bottom: 2rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left: 1rem;
 }
 
 .plans-pricing-item-subtext {
