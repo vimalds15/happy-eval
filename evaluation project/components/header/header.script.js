@@ -25,9 +25,13 @@ function initializeHeader() {
     expandNavbarFeatures.classList.remove("active");
     expandNavbarSolutions.classList.remove("active");
     expandNavbarResources.classList.remove("active");
-    modalOverlay.style.display = "block";
 
-    modalOverlay.style.top = "7.8%";
+    const header = document.getElementById("header");
+    const y = header.getBoundingClientRect().bottom;
+
+    modalOverlay.style.display = "block";
+    modalOverlay.style.top = y + "px";
+
     productsHeader.style.background = "#FFF";
     productsHeader.style.border = "1px solid rgb(0 0 0 / 10%)";
     productsHeader.querySelector(".arrow-down").classList.add("active");

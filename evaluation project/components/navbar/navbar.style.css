@@ -14,10 +14,24 @@
   border-top: 1px solid rgb(255 58 58 / 20%);
 }
 
+.navbar-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .navbar-logo-container {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.hamburger-menu-icon {
+  height: 15px;
+  width: 15px;
+  margin-right: 1.5rem;
+  object-fit: contain;
+  cursor: pointer;
 }
 
 .navbar-options-container {
@@ -59,8 +73,8 @@
   gap: 4rem;
   padding: 3rem 10rem;
   overflow: hidden;
-  position: absolute;
-  top: 7rem;
+  position: fixed;
+  /* top: 7rem; */
   width: 100%;
   z-index: 15;
 }
@@ -175,7 +189,7 @@
   gap: 4rem;
   padding: 3rem 10rem;
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   justify-content: space-between;
   top: 7rem;
   width: 100%;
@@ -324,7 +338,7 @@
   gap: 4rem;
   padding: 3rem 10rem;
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   justify-content: space-between;
   top: 7rem;
   width: 100%;
@@ -530,6 +544,78 @@
   background-color: #fff;
 }
 
+.mobile-navbar {
+  display: none;
+  position: absolute;
+  width: 100%;
+  padding: 0.6rem 6rem;
+  background-color: white;
+  top: 7rem;
+  height: 80vh;
+}
+
+.navbar-item,
+.nested-item {
+  padding-bottom: 0.6rem;
+  margin-top: 0.6rem;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+.navbar-header,
+.nested-item .navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.navbar-header p,
+.nested-item .navbar-header p {
+  margin: 0;
+}
+
+.toggle {
+  font-size: 20px;
+}
+
+.navbar-content {
+  display: none;
+  padding-left: 20px;
+  border-radius: 5px;
+}
+
+.navbar-content p {
+  padding: 0.6rem 0.6rem;
+  margin: 0.2rem 0;
+  font-size: 14px;
+  font-weight: 300;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.navbar-content p:hover {
+  background-color: #f7f7f7;
+}
+.nested-item > .navbar-header p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.navbar-content.show {
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-header:hover {
+  background-color: #f7f7f7;
+}
+
+.mobile-navbar.active {
+  display: block;
+}
+
 @media (max-width: 1500px) {
   .navbar-features-expand-container {
     gap: 1rem;
@@ -567,6 +653,11 @@
   .navbar-options-container {
     display: flex;
   }
+
+  .mobile-navbar.active,
+  .hamburger-menu-icon {
+    display: none;
+  }
   .navbar-features-expand-column:nth-child(2) {
     flex: 3;
   }
@@ -590,7 +681,8 @@
 }
 
 @media (max-width: 576px) {
-  .navbar {
+  .navbar,
+  .mobile-navbar {
     padding: 0.6rem 2rem;
   }
 }

@@ -175,3 +175,22 @@
     text-align: left;
   }
 }
+
+.show-more-button {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  padding: 5px 10px;
+  width: fit-content;
+  background-color: #ffffff;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.show-more-button:hover {
+  background-color: #d2d2d2;
+}
+
+.hidden-row {
+  display: none;
+}

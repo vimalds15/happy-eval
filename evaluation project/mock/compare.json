@@ -131,6 +131,41 @@
           "team": false,
           "pro": true,
           "epro": true
+        },
+        {
+          "header": "Unlimited Contacts",
+          "basic": true,
+          "team": true,
+          "pro": true,
+          "epro": true
+        },
+        {
+          "header": "Import Contacts",
+          "basic": true,
+          "team": true,
+          "pro": true,
+          "epro": true
+        },
+        {
+          "header": "Contact Custom Fields",
+          "basic": true,
+          "team": true,
+          "pro": true,
+          "epro": true
+        },
+        {
+          "header": "Unlimited Contact Groups",
+          "basic": true,
+          "team": true,
+          "pro": true,
+          "epro": true
+        },
+        {
+          "header": "Contact Group Custom Fields",
+          "basic": false,
+          "team": false,
+          "pro": true,
+          "epro": true
         }
       ]
     },
