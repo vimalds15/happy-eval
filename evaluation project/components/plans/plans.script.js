@@ -13,6 +13,7 @@ const optionsData = [
 
 function initializePlans() {
   const container = document.querySelector(".plans-pricing-container");
+  const plansItemsContainer = document.querySelector(".plans-items-container");
 
   container.innerHTML = "";
 
@@ -21,6 +22,7 @@ function initializePlans() {
     .then((data) => {
       const render = (pageType) => {
         container.innerHTML = "";
+        plansItemsContainer.innerHTML = "";
 
         const modeContainer = document.querySelector(
           ".plans-options-container"
@@ -224,7 +226,16 @@ function initializePlans() {
           });
 
           container.appendChild(planElement);
+
+          plansItemsContainer.appendChild(container);
         });
+
+        const noteDiv = document.createElement("div");
+        noteDiv.classList.add("plans-pricing-note", "font-light");
+        const noteDivText = document.createElement("p");
+        noteDivText.textContent = data[pageType]?.plans?.note;
+        noteDiv.appendChild(noteDivText);
+        plansItemsContainer.appendChild(noteDiv);
 
         const pricingModes = document.querySelectorAll(".plans-mode-item");
 

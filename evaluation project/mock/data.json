@@ -120,7 +120,8 @@
           "ctaText": "Get a Demo",
           "ctaLink": "https://www.happyfox.com/help-desk-software-demo/"
         }
-      ]
+      ],
+      "note": "Number of agents is capped at 5 for Basic plan. No limit on agents for other plans. Non-profit and educational organizations are eligible for a discount."
     },
     "compare": {
       "headers": ["Basic", "Team", "Pro", "Enterprise PRO"],
@@ -560,7 +561,8 @@
             }
           ]
         }
-      ]
+      ],
+      "note": ""
     },
     "plans": {
       "modes": [
@@ -630,7 +632,8 @@
           "ctaText": "Get a Demo",
           "ctaLink": "https://www.happyfox.com/help-desk-software-demo/"
         }
-      ]
+      ],
+      "note": "All plans come with SSL security, unlimited agents, smart rules, knowledge base, multilingual support, rich text formatting in tickets and iOS & Android apps."
     }
   }
 }
