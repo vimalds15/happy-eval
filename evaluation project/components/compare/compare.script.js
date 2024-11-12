@@ -118,7 +118,7 @@ function initializeCompare() {
 function createShowMoreButton(visibleRows, hiddenRows) {
   const showMoreButton = document.createElement("button");
   showMoreButton.classList.add("show-more-button");
-  showMoreButton.textContent = hiddenRows.length > 0 ? "View All" : "View Less";
+  showMoreButton.textContent = hiddenRows.length > 0 ? "View All +" : "View Less -";
   return showMoreButton;
 }
 

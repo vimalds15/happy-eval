@@ -37,8 +37,8 @@
           "id": "yearly"
         },
         {
-          "type": "2-Year Savings Plans",
-          "subText": "Paid Up-front",
+          "type": "2-Year Savings Plan",
+          "subText": "Paid Up-Front",
           "id": "two-years"
         }
       ],
@@ -105,7 +105,7 @@
           "ctaLink": "https://www.happyfox.com/help-desk-software-demo/"
         },
         {
-          "type": "Enterprise Pro",
+          "type": "Enterprise PRO",
           "priceCtaText": "Contact Sales",
           "priceCtaLink": "https://www.happyfox.com/contact/",
           "subText": "Everything in Pro, and:",

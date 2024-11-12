@@ -88,8 +88,8 @@ function initializePlans() {
             if (priceElement) {
               const price = plan?.price[currentPricingMode];
               priceElement.innerHTML = `
-                    <span class="text-lg text-bold">$</span><span class="text-3xl text-bold">${price}</span>
-                    <span class="font-light">${
+                    <span class="text-xlg text-bold plans-pricing-item-dollar">$</span><span class="text-3xl text-bold">${price}</span>
+                    <span class="font-light text-xsm">${
                       pageType === "agent" ? "Per agent/mo" : "/month"
                     }</span>
                   `;
@@ -121,16 +121,16 @@ function initializePlans() {
             const priceElement = document.createElement("p");
             priceElement.classList.add("plans-pricing-item-amount");
             priceElement.innerHTML = `
-            <span class="text-lg text-bold">$</span><span class="text-3xl text-bold">${plan?.price?.monthly}</span>
-            <span class="font-light">Per agent/mo</span>
+            <span class="text-xlg text-bold">$</span><span class="text-3xl text-bold">${plan?.price?.monthly}</span>
+            <span class="font-light text-xsm">Per agent/mo</span>
             `;
             planElement.appendChild(priceElement);
           } else if (pageType === "unlimited" && plan?.price) {
             const priceElement = document.createElement("p");
             priceElement.classList.add("plans-pricing-item-amount");
             priceElement.innerHTML = `
-            <span class="text-lg text-bold">$</span><span class="text-3xl text-bold">${plan?.price?.yearly}</span>
-            <span class="font-light">/month</span>
+            <span class="text-xlg text-bold">$</span><span class="text-3xl text-bold">${plan?.price?.yearly}</span>
+            <span class="font-light text-xsm">/month</span>
             `;
             planElement.appendChild(priceElement);
           }
