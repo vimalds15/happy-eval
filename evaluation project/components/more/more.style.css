@@ -97,6 +97,9 @@
 }
 
 @media (max-width: 768px) {
+  .more-item-wrapper {
+    width: 100% !important;
+  }
   .more-container {
     max-width: 720px;
   }
