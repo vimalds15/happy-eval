@@ -235,3 +235,51 @@
     max-width: 90%;
   }
 }
+
+@media (min-width: 1501px) {
+  .plans-grid-header-item {
+    top: 6.7%;
+  }
+}
+
+@media (min-width: 1601px) {
+  .plans-grid-header-item {
+    top: 5.8%;
+  }
+}
+
+@media (min-width: 1701px) {
+  .plans-grid-header-item {
+    top: 5.3%;
+  }
+}
+
+@media (min-width: 1801px) {
+  .plans-grid-header-item {
+    top: 5%;
+  }
+}
+
+@media (min-width: 1901px) {
+  .plans-grid-header-item {
+    top: 4.5%;
+  }
+}
+
+@media (min-width: 2001px) {
+  .plans-grid-header-item {
+    top: 4.5%;
+  }
+}
+
+@media (min-width: 2201px) {
+  .plans-grid-header-item {
+    top: 3%;
+  }
+}
+
+@media (min-width: 2300px) {
+  .plans-grid-header-item {
+    top: 2%;
+  }
+}
