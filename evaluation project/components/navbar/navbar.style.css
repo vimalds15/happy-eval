@@ -77,6 +77,10 @@
   background-color: #ffffff;
 }
 
+.navbar-options-item.active {
+  background-color: #ffffff;
+}
+
 .navbar-demo-cta {
   background-color: #ff3a3a;
   color: #fff;
@@ -85,25 +89,33 @@
   cursor: pointer;
 }
 
+.navbar-features-expand-wrapper {
+  display: flex;
+  max-width: 1140px;
+  width: 100%;
+  z-index: 15;
+  margin: 0 auto;
+}
+
 .navbar-features-expand-container {
   display: none;
   height: 80vh;
-  background: linear-gradient(293deg, #fff, #fff),
+  max-height: 700px;
+  background: linear-gradient(293deg, #fff, #f9f9f9),
     linear-gradient(291deg, #f9f9f9, #f9f9f9),
     linear-gradient(291deg, #f9f9f9, #f9f9f9);
   background-position: left top, right top;
   background-repeat: no-repeat, no-repeat;
   background-size: 75% 100%, 25% 100%;
   gap: 4rem;
-  padding: 3rem 10rem;
+  padding: 3rem 0;
   overflow: hidden;
+  justify-content: space-between;
   position: fixed;
   /* top: 7rem; */
   width: 100%;
   z-index: 15;
 }
-
-
 
 .navbar-features-expand-column {
   display: flex;
@@ -140,6 +152,20 @@
 .navbar-expand-feature:hover {
   background-color: #f9f9f9;
 }
+.navbar-expand-more-feature:hover {
+  background-color: #dce3e3;
+}
+
+.navbar-expand-integration-more-feature {
+  background-color: #fff !important;
+  cursor: pointer;
+  max-width: 250px;
+  margin-top: 20px;
+  border-radius: 15px;
+}
+.navbar-expand-integration-more-feature:hover {
+  background-color: #dce3e3 !important;
+}
 
 .navbar-expand-feature svg {
   min-width: 15px;
@@ -163,6 +189,17 @@
   align-items: center;
 }
 
+.navbar-expand-more-feature {
+  background-color: #f4f6f6;
+}
+
+.navbar-expand-features-more-title {
+  font-size: 16px;
+  color: #000;
+  font-weight: 400;
+  padding: 10px 25px;
+}
+
 .navbar-expand-features-description {
   font-size: 13px;
   color: #646f79;
@@ -175,6 +212,17 @@
   width: 14px;
   background-image: url(https://assets.www.happyfox.com/v2/images/menu-small-arrow-grey.svg);
   opacity: 0;
+  margin-left: 5px;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+
+.navbar-expand-features-more-title::after {
+  content: "";
+  height: 14px;
+  width: 14px;
+  background-image: url(https://assets.www.happyfox.com/v2/images/menu-small-arrow-grey.svg);
+  opacity: 1;
   margin-left: 5px;
   display: inline-block;
   transition: opacity 0.3s ease;
@@ -205,22 +253,21 @@
 
 .navbar-solutions-expand-container {
   display: none;
-  height: 80vh;
-  background: linear-gradient(293deg, #fff, #fff),
+  height: 70vh;
+  max-height: 700px;
+  background: linear-gradient(293deg, #fff, #f9f9f9),
     linear-gradient(291deg, #f9f9f9, #f9f9f9),
     linear-gradient(291deg, #f9f9f9, #f9f9f9);
   background-position: left top, right top;
   background-repeat: no-repeat, no-repeat;
   background-size: 75% 100%, 25% 100%;
   gap: 4rem;
-  padding: 3rem 10rem;
+  padding: 3rem 0rem;
   overflow: hidden;
   position: fixed;
   justify-content: space-between;
-  top: 7rem;
   width: 100%;
   z-index: 15;
-  flex: 1;
 }
 
 .navbar-solutions-expand-column {
@@ -252,7 +299,7 @@
   background-color: #f9f9f9;
   height: 120%;
   margin: -3rem 0;
-  padding: 3rem 0;
+  padding: 2.5rem 0;
   padding-left: 1.5rem;
 }
 
@@ -362,11 +409,11 @@
   background-repeat: no-repeat, no-repeat;
   background-size: 75% 100%, 25% 100%;
   gap: 4rem;
-  padding: 3rem 10rem;
+  padding: 3rem;
   overflow: hidden;
   position: fixed;
   justify-content: space-between;
-  top: 7rem;
+  max-height: 500px;
   width: 100%;
   z-index: 15;
   flex: 1;
@@ -402,7 +449,7 @@
   background-color: #f9f9f9;
   height: 120%;
   margin: -3rem 0;
-  padding: 3rem 0;
+  padding: 2rem 0;
   padding-left: 1.5rem;
 }
 
@@ -574,10 +621,16 @@
   display: none;
   position: absolute;
   width: 100%;
-  padding: 0.6rem 6rem;
+  padding: 0.6rem 0;
   background-color: white;
   top: 7rem;
   height: 80vh;
+}
+
+.mobile-navbar-wrapper {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .navbar-item,
@@ -642,9 +695,24 @@
   display: block;
 }
 
+@media (min-width: 1501px) {
+  .navbar-features-expand-container {
+    gap: 1rem;
+    padding: 2rem 0;
+    max-height: 600px;
+  }
+  .navbar-solutions-expand-container {
+    gap: 1rem;
+    padding: 3rem 0;
+    max-height: 560px;
+  }
+}
+
 @media (max-width: 1500px) {
   .navbar-features-expand-container {
     gap: 1rem;
+    padding: 2rem 0;
+    max-height: 90vh;
   }
 
   .navbar-solutions-expand-container {
@@ -717,25 +785,39 @@
     padding-left: 15px;
     padding-right: 15px;
   }
+
+  .mobile-navbar-wrapper {
+    max-width: 960px;
+  }
+
+  .navbar-features-expand-wrapper {
+    max-width: 960px;
+  }
   .hamburger-menu-icon {
     display: block;
   }
 }
 
 @media (max-width: 992px) {
-  .navbar-wrapper {
+  .navbar-wrapper,
+  .mobile-navbar-wrapper,
+  .navbar-features-expand-wrapper {
     max-width: 720px;
   }
 }
 
 @media (max-width: 768px) {
-  .navbar-wrapper {
+  .navbar-wrapper,
+  .mobile-navbar-wrapper,
+  .navbar-features-expand-wrapper {
     max-width: 540px;
   }
 }
 
 @media (max-width: 576px) {
-  .navbar-wrapper {
+  .navbar-wrapper,
+  .mobile-navbar-wrapper,
+  .navbar-features-expand-wrapper {
     max-width: 420px;
   }
   .navbar {
@@ -744,13 +826,16 @@
 }
 
 @media (max-width: 480px) {
-  .navbar-wrapper {
+  .navbar-wrapper,
+  .mobile-navbar-wrapper,
+  .navbar-features-expand-wrapper {
     max-width: 90%;
   }
 }
 
 @media (min-width: 1500px) {
-  .navbar-wrapper {
+  .navbar-wrapper,
+  .navbar-features-expand-wrapper {
     max-width: 1440px;
   }
 }

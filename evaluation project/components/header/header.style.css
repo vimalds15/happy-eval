@@ -50,7 +50,17 @@
   border: 1px solid rgb(255 58 58 / 20%);
   border-bottom: none;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
+}
+
+.header-expand-products-wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  background: red;
+  width: 100%;
+  position: relative;
+  z-index: 15;
 }
 
 .header-expand-products {
@@ -58,8 +68,9 @@
   height: 28.5rem;
   width: 47%;
   position: absolute;
-  left: 19.1rem;
   background: #fff;
+  left: 9.7rem;
+  top: -0.1rem;
   z-index: 15;
   transition: all 300ms ease;
   border-top: 1px solid rgb(255 58 58 / 20%);
@@ -73,7 +84,6 @@
 .header-expand-products {
   display: none;
   grid-template-columns: repeat(2, 1fr);
-  place-items: center;
   padding: 1rem;
   column-gap: 1.5rem;
 }
@@ -81,7 +91,7 @@
 .header-expand-products-item {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   padding: 0.6rem;
   border-radius: 10px;
   cursor: pointer;
@@ -121,14 +131,12 @@
 }
 
 @media (max-width: 1200px) {
-  .header-wrapper {
+  .header-wrapper,
+  .header-expand-products-wrapper {
     max-width: 960px;
   }
   .header {
     padding: 0.6rem 0;
-  }
-  .header-expand-products {
-    left: 19.1rem;
   }
   .header-products {
     display: none;
@@ -139,31 +147,42 @@
 }
 
 @media (max-width: 992px) {
-  .header-wrapper {
+  .header-wrapper,
+  .header-expand-products-wrapper {
     max-width: 720px;
   }
 }
 
 @media (max-width: 768px) {
-  .header-wrapper {
+  .header-wrapper,
+  .header-expand-products-wrapper {
     max-width: 540px;
   }
 }
 
 @media (max-width: 576px) {
-  .header-wrapper {
+  .header-wrapper,
+  .header-expand-products-wrapper {
     max-width: 420px;
   }
 }
 
 @media (max-width: 480px) {
-  .header-wrapper {
+  .header-wrapper,
+  .header-expand-products-wrapper {
     max-width: 90%;
   }
 }
 
 @media (min-width: 1500px) {
-  .header-wrapper {
+  .header-wrapper,
+  .header-expand-products-wrapper {
     max-width: 1440px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header-expand-products {
+    width: 670px;
   }
 }

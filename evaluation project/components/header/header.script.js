@@ -22,18 +22,39 @@ function initializeHeader() {
     const expandNavbarResources = document.querySelector(
       ".navbar-resources-expand-container"
     );
+
+    const navbarFeature = document.querySelector("#features");
+    const navbarFeatureArrowDown = navbarFeature.querySelector(".arrow-down");
+    const navbarSolution = document.querySelector("#solutions");
+    const navbarSolutionArrowDown = navbarSolution.querySelector(".arrow-down");
+    const navbarResource = document.querySelector("#resources");
+    const navbarResourceArrowDown = navbarResource.querySelector(".arrow-down");
     expandNavbarFeatures.classList.remove("active");
     expandNavbarSolutions.classList.remove("active");
     expandNavbarResources.classList.remove("active");
+    navbarFeatureArrowDown.classList.remove("active");
+    navbarResourceArrowDown.classList.remove("active");
+    navbarSolutionArrowDown.classList.remove("active");
+
+    navbarFeature.classList.remove("active");
+    navbarResource.classList.remove("active");
+    navbarSolution.classList.remove("active");
 
     const header = document.getElementById("header");
     const y = header.getBoundingClientRect().bottom;
+
+    const productsX = productsHeader.getBoundingClientRect().left;
+    const productsY = productsHeader.getBoundingClientRect().bottom;
+
+    console.log(productsX, productsY);
 
     modalOverlay.style.display = "block";
     modalOverlay.style.top = y + "px";
 
     productsHeader.style.background = "#FFF";
     productsHeader.style.border = "1px solid rgb(0 0 0 / 10%)";
+    productsHeader.style.top = productsY + "px";
+    // productsHeader.style.left = productsX + "px";
     productsHeader.querySelector(".arrow-down").classList.add("active");
     document.body.style.overflow = "hidden";
   }

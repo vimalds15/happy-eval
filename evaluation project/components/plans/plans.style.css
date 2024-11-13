@@ -312,18 +312,6 @@
   }
 }
 
-@media (min-width: 1500px) {
-  .plans-items-container {
-    max-width: 1440px;
-    margin: 0 auto;
-  }
-
-  .plans-mode-container {
-    max-width: 1440px;
-    margin: 0 auto;
-  }
-}
-
 @media (max-width: 1200px) {
   .plans-mode-container,
   .plans-pricing-container {
@@ -362,12 +350,5 @@
   .plans-mode-container,
   .plans-pricing-container {
     max-width: 90%;
-  }
-}
-
-@media (min-width: 1500px) {
-  .plans-mode-container,
-  .plans-pricing-container {
-    max-width: 1440px;
   }
 }

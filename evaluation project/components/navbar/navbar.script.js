@@ -21,7 +21,9 @@ function initializeNavbar() {
     navbarResourceArrowDown.classList.remove("active");
     navbarSolutionArrowDown.classList.remove("active");
     navbarFeatureArrowDown.classList.toggle("active");
-
+    navbarFeature.classList.toggle("active");
+    navbarResource.classList.remove("active");
+    navbarSolution.classList.remove("active");
     expandNavbarFeatures.classList.toggle("active");
     if (modalOverlay) {
       if (expandNavbarFeatures.classList.contains("active")) {
@@ -45,6 +47,9 @@ function initializeNavbar() {
     navbarFeatureArrowDown.classList.remove("active");
     navbarResourceArrowDown.classList.remove("active");
     navbarSolutionArrowDown.classList.toggle("active");
+    navbarFeature.classList.remove("active");
+    navbarResource.classList.remove("active");
+    navbarSolution.classList.toggle("active");
 
     if (modalOverlay) {
       if (expandNavbarSolutions.classList.contains("active")) {
@@ -68,6 +73,9 @@ function initializeNavbar() {
     navbarFeatureArrowDown.classList.remove("active");
     navbarSolutionArrowDown.classList.remove("active");
     navbarResourceArrowDown.classList.toggle("active");
+    navbarFeature.classList.remove("active");
+    navbarResource.classList.toggle("active");
+    navbarSolution.classList.remove("active");
     if (modalOverlay) {
       if (expandNavbarResources.classList.contains("active")) {
         const navbar = document.getElementById("navbar");

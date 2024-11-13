@@ -55,12 +55,6 @@
   transition: transform 800ms ease;
 }
 
-@media (min-width: 1501px) {
-  .faq-wrapper {
-    max-width: 1410px;
-  }
-}
-
 @media (max-width: 992px) {
   .faq-wrapper {
     max-width: 960px;

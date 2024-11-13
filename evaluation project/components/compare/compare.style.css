@@ -70,7 +70,7 @@
 }
 
 .plans-grid-row:hover > * {
-  background-color: #f7f7f7 !important; 
+  background-color: #f7f7f7 !important;
 }
 
 .plans-grid-header {
@@ -233,11 +233,5 @@
 @media (max-width: 480px) {
   .plans-table-container {
     max-width: 90%;
-  }
-}
-
-@media (min-width: 1500px) {
-  .plans-table-container {
-    max-width: 1440px;
   }
 }
